@@ -19,12 +19,12 @@ Tentative project structure :
 
 4. Every bit of code will be unit tested before being merged into master.
 
-5. I will provide all resources for development including access to courses on Udemy, Frontend Masters, Educative and others.
+5. I will provide all resources for development including access to courses on [Udacity](https://udacity.com), [Udemy](https://udemy.com/), [Frontend Masters](https://frontendmasters.com), [Educative](https://educative.io) and others.
 
 6. The deliverable will be a Minimum Viable Product, deployed and tested on 50 users.
 
 7. The project is aimed to appreciate the process of Software Development that happens in big tech companies, and startups alike.
 
-For queries, please reach out to me on dkp.daiict@gmail.co, or on [LinkedIn](https://linkedin.com/in/dkp1903) or [Twitter](https://twitter.com/dkp1903)
+For queries, please reach out to me on dkp.daiict@gmail.com, or on [LinkedIn](https://linkedin.com/in/dkp1903) or [Twitter](https://twitter.com/dkp1903)
 
 DKP
