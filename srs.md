@@ -6,21 +6,29 @@
 
     The purpose of this document is a detailed description of Devagram. It will explain all the features and purpose of the webApp.
 
-#### 1.2 Intended Audience
+#### 1.2 Scope of project
 
-    Intended audience will be developer across the globe or any person who is related with computer programming.
+    This WebApp is for developers to connect with each other. This system will make it easy to connect developers with each others. Developers can share their work and projects with others. To resolve the issue of better community, developers can make beautiful and big community here to solve their doubts by posting them.
 
-#### 1.3 Intended Use
+    Developer can message and follow other developer and discuss with them.
 
-    The main purpose of these project is to make a convenient platform for developers connect with other developers via a social media like platform. The main use is to connect developer across the globe. They can share their projects with others. They can post any tech related news or discuss their doubts. They can make their profile to showcase themselves.
+#### 1.3 Glossary
 
-#### 1.4 Scope
+    Developer
+        - A user related to tech industry and computer programming.
 
-    need to think on it...
+    WebApp
+        - A WebApp is a computer program that utilizes web browsers and web technology to perform tasks over the Internet.
 
-#### 1.5 Definition and Acronyms
+#### 1.4 Reference
 
-    --
+    IEEE. IEEE Std 830–1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998.
+
+#### 1.5 Overview of Document
+
+    The next chapter, the Overall Description section, of this document gives an overview of the functionality of the product. It describes the informal requirements and is used to establish a context for the technical requirements specification in the next chapter.
+
+    The third chapter, Requirements Specification section, of this document is written primarily for the developers and describes in technical terms the details of the functionality of the product.
 
 <hr/>
 
