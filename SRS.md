@@ -22,8 +22,21 @@
 2. ### Overall Description
 
    1. ### User Needs
-   2. ### Assumptions and Dependencies
-   <br/>
+
+      - User should be able to **add** posts.
+      - User should be able to **Like and use other emojis** on posts,**comment** on posts.
+      - User should be able to see **nearby events** in his city.
+      - User should be able to **chat** with his followers.
+      - User should be able to add **stories**.
+      - User should be able to see **trending hashtags** like in twitter so he/ she will be updated with new stuffs in tech world.
+      - User should be able to see **all events of his interested domains**.
+      - User should be able to find **internships/jobs** posted in selected city.
+      - User should be able to **post job/internship openings**.
+      - User should be able to **follow hashtags** so he/she can be updated will all new things of that hashtag.
+      - User needs a **fast login option** like through facebook/google/linkedin etc
+
+   2. Assumptions and Dependencies - As it is web based project we assume user has decent internet connection! - We are assuming while making srs that devagram would be a website.
+      <br/>
 
 3. ### System Features and Requirements
    1. ### Functional Requirements
