@@ -39,4 +39,11 @@
       * #### **Section for upcoming hackathons**
         - Upcoming and live hackathons are added in the hackathons sections
         - Leads to more engagement.
+      * #### **Section for job applications**
+        - Developers looking for a job can easily connect with recruiters.
+        - Only developer-centric jobs will be posted.
+      * #### **Chats and Messaging**
+        - Great tool for interaction.
+        - Code Snippets can be posted with proper formatting.
+        - Allows to share the learning or clear doubts and helps in collaboration.
    4. ### Non Functional Requirements
