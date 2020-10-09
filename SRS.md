@@ -4,7 +4,7 @@
 
    1. ### Purpose
 
-      - This is a platform for the developers for showcasing there work,get reviewed by the fellow developers,community and interact and collaborate towards the open source community.
+      - A platform for developers to showcase projects, code snips, tutorials and memes,get reviewed by the fellow developers,community and interact and collaborate towards the open source community.
 
    2. ### Intended Audience
       - The targeted audience would be the newbie to the experienced developers struggling to start their development journey or to get the right opportunity for their growth.
