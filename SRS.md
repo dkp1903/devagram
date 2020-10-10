@@ -281,9 +281,6 @@
       - System verifies user's participation.
       - System provide invitation link.
 
-4. ### System Features and Requirements
-
-   1. ### Functional Requirements
    2. ### External Interface Requirements
    3. ### System Features<br>
       - #### **Rating the post in start**
