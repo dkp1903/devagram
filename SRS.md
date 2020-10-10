@@ -53,9 +53,8 @@
       - User can send **messages** to other users.
       - User will be able to see **events** around his/her place and join them.
       - User can find other **developers around** his/her place.
-      - User will be able to apply for any **job** available on the Devagram.
       - User can **turn on notification** for event to get notified.
-      - User can see the upcoming hackathons and participate in it.
+      - User can see the upcoming **hackathons** and participate in it.
 
    2. ### Assumptions and Dependencies
 
@@ -188,9 +187,98 @@
 
       **Step-By-Step Description :**
 
-      - User provide details of the story that he/she want to de;ete.
+      - User provide details of the story that he/she want to delete.
       - System uses the details finds the story.
       - System deletes the story.
+
+      ### 1.1.11 Message other users
+
+      **Brief Description :**
+
+      - Users can share message to other users. Message can have attachments like image, video, files(txt, doc, pdf etc).
+
+      **Step-By-Step Description :**
+
+      - User provide message(with / without) attachments and details of receiver.
+      - System create socket connection between user and receiver.
+      - System sends the message to receiver.
+
+      ### 1.1.12 Checkout events around
+
+      **Brief Description :**
+
+      - User can check events in surroundings and also at other places. To check surrounding events user need to provide his/her location.
+
+      **Step-By-Step Description :**
+
+      - User ask for surrounding events.
+      - System ask for location.
+      - User provides location access.
+      - System shows the events details.
+
+      **or**
+
+      - User ask for events at particular location or user provide some keywords for event.
+      - System shows matched events details.
+
+      ### 1.1.13 Find other developers around
+
+      **Brief Description :**
+
+      - User can see developers in surrounding. Only developers will be shown who has provided location details.
+
+      **Step-By-Step Description :**
+
+      - User ask for developers in surroundings.
+      - System verify users location, if location not provided ask for location.
+      - System shows the developers in surroundings.
+
+      ### 1.1.14 Turn for notification for events
+
+      **Brief Description :**
+
+      - User can turn on notification for events that he/she is following.
+
+      **Step-By-Step Description :**
+
+      - User can turn on the notification for event.
+      - System add user to notification list.
+      - System provide push notification to user according to event.
+
+      ### 1.1.15 See upcoming Hackathons
+
+      **Brief Description :**
+
+      - User can see the details of upcoming hackathons.
+
+      **Step-By-Step Description :**
+
+      - User ask for upcoming hackathons.
+      - System provide details of upcoming hackathons.
+
+      ### 1.1.16 Participate in hackathon
+
+      **Brief Description :**
+
+      - User can participate in any hackathons.
+
+      **Step-By-Step Description :**
+
+      - User provide details needed to participate.
+      - System verify details.
+      - System send confirmation mail and confirm the participation.
+
+      ### 1.1.17 Invite other for hackathon
+
+      **Brief Description :**
+
+      - User can invite other user for hackathon..
+
+      **Step-By-Step Description :**
+
+      - User ask for invitation link.
+      - System verifies user's participation.
+      - System provide invitation link.
 
    2. ### External Interface Requirements
    3. ### System Features<br>
