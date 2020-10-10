@@ -293,3 +293,18 @@
         - Upcoming and live hackathons are added in the hackathons sections
         - Leads to more engagement.
    4. ### Non Functional Requirements
+
+      - Performance Requirements :
+      - Security Requirements :
+      - Software Quality Attributes :
+        - System should be-
+          ➢ Consistent in performance
+          ➢ Safe and Secure
+          ➢ Robust
+          ➢ Scalable
+          ➢ Flexible
+          ➢ User friendly
+          ➢ Efficient
+          ➢ Inter-operable
+          ➢ Upgradable
+          ➢ Available all the time.
