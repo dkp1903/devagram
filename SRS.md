@@ -55,6 +55,7 @@
       - User can find other **developers around** his/her place.
       - User can **turn on notification** for event to get notified.
       - User can see the upcoming **hackathons** and participate in it.
+      - User needs a **fast login option** like through facebook/google/linkedin etc
 
    2. ### Assumptions and Dependencies
 
@@ -280,68 +281,7 @@
       - System verifies user's participation.
       - System provide invitation link.
 
-      - User should be able to **add** posts.
-      - User should be able to **Like and use other emojis** on posts,**comment** on posts.
-      - User should be able to see **nearby events** in his city.
-      - User should be able to **chat** with his followers.
-      - User should be able to add **stories**.
-      - User should be able to see **trending hashtags** like in twitter so he/ she will be updated with new stuffs in tech world.
-      - User should be able to see **all events of his interested domains**.
-      - User should be able to find **internships/jobs** posted in selected city.
-      - User should be able to **post job/internship openings**.
-      - User should be able to **follow hashtags** so he/she can be updated will all new things of that hashtag.
-      - User needs a **fast login option** like through facebook/google/linkedin etc
-
-   2. Assumptions and Dependencies - As it is web based project we assume user has decent internet connection! - We are assuming while making srs that devagram would be a website.
-      <br/>
-
 4. ### System Features and Requirements
-
-   1. ### Functional Requirements
-   2. ### External Interface Requirements# DEVAGRAM - SOFTWARE REQUIREMENT SPECIFICATION
-
-5. ### Introduction
-
-   1. ### Purpose
-
-      - A platform for developers to showcase projects, code snips, tutorials and memes,get reviewed by the fellow developers,community and interact and collaborate towards the open source community.
-
-   2. ### Intended Audience
-      - The targeted audience would be the newbie to the experienced developers struggling to start their development journey or to get the right opportunity for their growth.
-   3. ### Intended Use
-      - Getting reviews
-      - Share the learning
-      - Participating in Hackathons
-      - Getting hired
-      - Collaborate in OSS
-      - Network with professionals
-   4. ### Scope
-   5. ### Definitions and Acronyms
-   <br />
-
-6. ### Overall Description
-
-   1. ### User Needs
-
-      - User should be able to **add** posts.
-      - User should be able to **Like and use other emojis** on posts,**comment** on posts.
-      - User should be able to see **nearby events** in his city.
-      - User should be able to **chat** with his followers.
-      - User should be able to add **stories**.
-      - User should be able to see **trending hashtags** like in twitter so he/ she will be updated with new stuffs in tech world.
-      - User should be able to see **all events of his interested domains**.
-      - User should be able to find **internships/jobs** posted in selected city.
-      - User should be able to **post job/internship openings**.
-      - User should be able to **follow hashtags** so he/she can be updated will all new things of that hashtag.
-      - User needs a **fast login option** like through facebook/google/linkedin etc
-
-   2. ### Assumptions and Dependencies
-
-   - As it is web based project we assume user has decent internet connection!
-   - We are assuming while making srs that devagram would be a website.
-     <br/>
-
-7. ### System Features and Requirements
 
    1. ### Functional Requirements
    2. ### External Interface Requirements
