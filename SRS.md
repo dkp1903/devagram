@@ -58,7 +58,8 @@
    2. ### Assumptions and Dependencies
 
       - As Devagram is a website, It should be accessible on major browsers like Google Chrome, Mozilla Firefox etc.
-        Also it requires good internet otherwise there will be performance and usability issues. Website will be responsive and accessible on both big and small screens.
+        Also it requires good internet otherwise there will be performance and usability issues.
+      - Website will be responsive and accessible on both big and small screens.
 
    <br/>
 
