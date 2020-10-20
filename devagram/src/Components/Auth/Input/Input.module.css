@@ -1,0 +1,20 @@
+.Input {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin: 0.3rem 0.5rem;
+  outline: none;
+  background: #eee;
+  display: block;
+  width: 300px;
+}
+.Input:focus {
+  border-color: gray;
+  background: #fff;
+}
+
+@media (max-width: 500px) {
+  .Input {
+    width: 100%;
+  }
+}
