@@ -1,0 +1,37 @@
+.Home {
+  height: 100vh;
+  overflow: hidden;
+  background: #eee;
+}
+
+.Home header {
+  margin: 1rem;
+}
+
+.Home header h1 {
+  font-family: "Sansita Swashed", cursive;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #fdf497
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+}
+
+.Home header p {
+  font-size: 0.8rem;
+}
