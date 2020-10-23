@@ -1,5 +1,5 @@
 .Home {
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   background: #eee;
 }
@@ -34,4 +34,14 @@
 
 .Home header p {
   font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .Home header h1 {
+    display: block;
+  }
+
+  .Home header > * {
+    text-align: center;
+  }
 }
