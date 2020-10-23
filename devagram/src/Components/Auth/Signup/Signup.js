@@ -26,12 +26,10 @@ const Signup = () => {
 
     console.log(formData);
 
-    const reset = { target: { value: "" } };
-
-    setEmail(reset);
-    setName(reset);
-    setUsername(reset);
-    setPassword(reset);
+    setEmail("");
+    setName("");
+    setUsername("");
+    setPassword("");
   };
 
   return (
