@@ -11,6 +11,16 @@
   cursor: pointer;
   outline: none;
   color: #fff;
+  transition: all 400ms;
+}
+
+.Button:disabled {
+  filter: brightness(0.7);
+  cursor: not-allowed;
+}
+.Button:active {
+  transform: scale(0.9);
+  transition: all 400ms;
 }
 
 .Primary {

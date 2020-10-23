@@ -8,7 +8,7 @@ const Home = (props) => {
     <div className={classes.Home}>
       <header>
         <h1>Devagram</h1>
-        <p>Instagram from Developers.</p>
+        <p>Instagram for Developers.</p>
       </header>
       <props.child />
     </div>
