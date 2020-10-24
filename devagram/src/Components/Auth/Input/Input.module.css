@@ -1,16 +1,38 @@
+.label {
+  position: relative;
+}
 .Input {
   padding: 0.5rem 1rem;
   border-radius: 3px;
   border: 1px solid #ddd;
-  margin: 0.3rem 0.5rem;
+  margin: 1rem auto;
   outline: none;
   background: #eee;
   display: block;
   width: 300px;
+  transition: all 400ms;
 }
 .Input:focus {
-  border-color: gray;
+  outline: 1px solid gray;
+  -moz-outline-radius: 3px;
+  -webkit-outline-radius: 3px;
+  -ms-outline-radius: 3px;
+  -o-outline-radius: 3px;
   background: #fff;
+  transition: all 400ms;
+}
+.Input:focus + .Small,
+.Input:valid + .Small {
+  top: 10%;
+  transition: all 400ms;
+}
+.Small {
+  font-size: 0.6rem;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 400ms;
 }
 
 @media (max-width: 500px) {

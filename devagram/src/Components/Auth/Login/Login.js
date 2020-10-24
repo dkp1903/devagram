@@ -1,21 +1,37 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 
 import Title from "../Title/Title";
 import classes from "./Login.module.css";
 import Input from "../Input/Input";
 import Button from "../../Button/Button";
-import { FaGoogle, FaFacebook } from "react-icons/fa";
-import { useState } from "react";
+import { FaFacebook } from "react-icons/fa";
+import GoogleAuth from "../GoogleAuth/GoogleAuth";
+import useHandleChange from "../../Hooks/HandleInputChange";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useHandleChange();
+  const [password, setPassword] = useHandleChange();
   const [error, setError] = useState("");
   const [isAuth, setAuth] = useState(false);
 
   const onLogin = (e) => {
     e.preventDefault();
+    const formData = {
+      email: email,
+      password: password,
+    };
+
+    console.log(formData);
+
+    setEmail("");
+    setPassword("");
+
+    /**
+     * To make the api call to post the user data once submitted
+     * below is example of success and failure cases
+     */
+
     if (email === "app@devagram.com" && password === "devagram2020") {
       setAuth(true);
     } else {
@@ -24,8 +40,6 @@ const Login = () => {
         setError("");
       }, 5000);
     }
-    setEmail("");
-    setPassword("");
   };
 
   if (isAuth) {
@@ -43,26 +57,29 @@ const Login = () => {
           <Input
             type="email"
             value={email}
-            change={(e) => setEmail(e.target.value)}
+            onChange={setEmail}
             name="email"
-            placeholder="Enter Username or Email"
+            required
+            aria-labelledby="label-email"
           />
           <Input
             type="password"
             value={password}
-            change={(e) => setPassword(e.target.value)}
+            onChange={setPassword}
             name="password"
-            placeholder="Enter password"
+            required
+            aria-labelledby="label-password"
           />
-          <Button type="submit" btnType="Primary">
+          <Button
+            type="submit"
+            btnType="Primary"
+            disabled={!(email && password)}
+          >
             Login
           </Button>
         </form>
         <div className="social-logins">
-          <Button type="button" btnType="Google">
-            <FaGoogle style={{ marginRight: "0.2rem" }} />
-            Login with Google
-          </Button>
+          <GoogleAuth />
           <Button type="button" btnType="Facebook">
             <FaFacebook style={{ marginRight: "0.2rem" }} />
             Login with Facebook
