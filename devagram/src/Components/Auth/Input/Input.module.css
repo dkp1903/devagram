@@ -24,7 +24,16 @@
 .Input:focus + .Small,
 .Input:valid + .Small {
   top: 10%;
-  transition: all 400ms;
+  animation: goUp 400ms forwards;
+}
+@keyframes goUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 10%;
+  }
 }
 .Small {
   font-size: 0.6rem;

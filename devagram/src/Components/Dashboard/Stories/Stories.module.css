@@ -1,0 +1,35 @@
+.Stories {
+  display: flex;
+  background: #eee;
+  overflow-x: scroll;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  position: relative;
+}
+.Stories::-webkit-scrollbar {
+  display: none;
+}
+
+.Scroll-arrow {
+  position: absolute;
+  padding: 0.2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.Left-arrow {
+  left: 1rem;
+}
+.Right-arrow {
+  right: 1rem;
+}
