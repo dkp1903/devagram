@@ -36,9 +36,22 @@
   background-color: #4c69ba;
   background-image: linear-gradient(#4c69ba, #3b55a0);
 }
+.EditProfile {
+  color: whitesmoke;
+  width: 4rem;
+  height: 3rem;
+  background-color: black;
+  border: 4px solid black;
+  border-radius: 1rem;
+}
 
 @media (max-width: 500px) {
   .Button {
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .EditProfile {
+    width: 3rem;
   }
 }

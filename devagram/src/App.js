@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Auth/Login/Login";
 import Signup from "./Components/Auth/Signup/Signup";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Profile from "./Components/Profile/Profile";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           component={() => <Home child={Signup} title="Sign Up" />}
         />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/profile" component={Profile} />
       </Switch>
     </div>
   );
