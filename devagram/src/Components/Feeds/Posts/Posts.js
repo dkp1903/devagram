@@ -1,27 +1,35 @@
-import React from 'react'
-import {MdFavorite} from 'react-icons/md'
-import {MdChatBubble} from 'react-icons/md'
-import './Posts.css'
+import React from "react";
+import { MdFavorite } from "react-icons/md";
+import { MdChatBubble } from "react-icons/md";
+import { Link } from "react-router-dom";
+import "./Posts.css";
+
 //the whole div of "post" would be iterated in the and info come from the GET request form the /allPost from backend
-function Posts() {
-    return (
-        <div className="post-container">
-            <div className="post">
-                <a  href="#" style={{backgroundImage:'url("https://images.unsplash.com/photo-1603826254095-65b30e1f3bb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60")'}} className="post-image"></a>
-                <div className="post-overlay">
-                    <span>
-                        <MdFavorite/>
-                        {Math.floor(Math.random()*100)}
-                    </span>
+const Posts = ({ photoUrl, likes, comments }) => {
+  return (
+    <div className="post-container">
+      <div className="post">
+        <Link
+          to="/feeds"
+          style={{
+            backgroundImage: `url(${photoUrl})`,
+          }}
+          className="post-image"
+        ></Link>
+        <div className="post-overlay">
+          <span>
+            <MdFavorite />
+            {likes}
+          </span>
 
-                    <span>
-                        <MdChatBubble/>  
-                        {Math.floor(Math.random()*100)}
-                    </span>
-                </div>
-            </div>
+          <span>
+            <MdChatBubble />
+            {comments}
+          </span>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Posts
+export default Posts;

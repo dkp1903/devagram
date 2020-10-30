@@ -1,6 +1,7 @@
 .post-container {
   margin: 15px;
   position: relative;
+  overflow: hidden;
 }
 
 .post-image {
@@ -9,15 +10,19 @@
   display: block;
   background-position: center;
   background-size: cover;
+  transition: all 400ms;
 }
 .post-container:hover {
   cursor: pointer;
 }
 .post-container:hover .post-overlay {
   opacity: 1;
+  transition: all 400ms;
 }
 .post-container:hover .post-image {
-  filter: brightness(65%);
+  filter: brightness(20%);
+  transform: scale(1.2);
+  transition: all 400ms;
 }
 .post-overlay {
   position: absolute;
@@ -27,6 +32,7 @@
   color: white;
   justify-content: center;
   opacity: 0;
+  transition: all 400ms;
 }
 
 .post-overlay span:first-child {

@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import classes from "./Navbar.module.css";
 import Title from "../Auth/Title/Title";
 import useHandleChange from "../Hooks/HandleInputChange";
-import { FaSearch, FaHome, FaInbox, FaCompass} from "react-icons/fa";
-import {Link} from 'react-router-dom'
+import { FaSearch, FaHome, FaInbox, FaCompass } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const [search, setText] = useHandleChange();
@@ -11,7 +11,10 @@ const Navbar = (props) => {
   return (
     <Fragment>
       <nav className={classes.Navbar}>
-        <Title title="Devagram" />
+        <Link to="/dashboard">
+          <Title title="Devagram" style={{ color: "black" }} />
+        </Link>
+
         <div className={classes.Search}>
           <input
             type="text"
@@ -23,23 +26,23 @@ const Navbar = (props) => {
             aria-labelledby="label-search"
           />
           <Link to="#">
-            <FaSearch style={{color:"blue"}} />
+            <FaSearch style={{ color: "blue" }} />
           </Link>
         </div>
         <div className={classes.Options}>
           <div className={classes.Option}>
             <Link to="/dashboard">
-              <FaHome style={{color:"black"}} />
+              <FaHome style={{ color: "black" }} />
             </Link>
           </div>
           <div className={classes.Option}>
             <Link to="#">
-              <FaInbox style={{color:"black"}} />
+              <FaInbox style={{ color: "black" }} />
             </Link>
           </div>
           <div className={classes.Option}>
             <Link to="/feeds">
-              <FaCompass style={{color:"black"}} />
+              <FaCompass style={{ color: "black" }} />
             </Link>
           </div>
           <div className={classes.Option}>
