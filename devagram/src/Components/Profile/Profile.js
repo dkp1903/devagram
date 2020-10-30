@@ -24,10 +24,9 @@ function Profile() {
           <div>
             <img
               style={{
-                height: "160px",
-                width: "160px",
-                borderRadius: "80px",
-                margin: "10px 10px",
+                height: "10rem",
+                width: "10rem",
+                borderRadius: "5rem",
               }}
               src="https://images.unsplash.com/photo-1569466896818-335b1bedfcce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
             />
@@ -37,12 +36,14 @@ function Profile() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-around",
               }}
             >
-              <h3>Darshil Patel</h3>
-              <Button btnType="EditProfile" children="Edit Profile" />
+              <h2>Darshil Patel</h2>
               <FaCog />
+            </div>
+            <div style={{ width: "auto" }}>
+              <Button btnType="EditProfile" children="Edit Profile" />
             </div>
 
             <div
