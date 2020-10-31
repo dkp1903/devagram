@@ -1,0 +1,13 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 800px;
+}
+.image {
+  width: 30%;
+  margin: 10px;
+}
+.bio {
+  margin-top: 20px;
+}
