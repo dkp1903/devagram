@@ -1,0 +1,59 @@
+.Button {
+  display: block;
+  width: 300px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  transition: all 400ms;
+}
+
+.Button:disabled {
+  filter: brightness(0.7);
+  cursor: not-allowed;
+}
+.Button:active {
+  transform: scale(0.9);
+  transition: all 400ms;
+}
+
+.Primary {
+  background: #0095f6;
+}
+
+.Google {
+  background: #dd4b39;
+  background-image: linear-gradient(#dd4b39, #e40404);
+}
+
+.Facebook {
+  background-color: #4c69ba;
+  background-image: linear-gradient(#4c69ba, #3b55a0);
+}
+.EditProfile {
+  color: whitesmoke;
+  width: 100%;
+  height: 3rem;
+  background-color: black;
+  border: 4px solid black;
+  border-radius: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  .Button {
+    width: 90%;
+  }
+}
+/*@media (max-width: 500px) {
+  .EditProfile {
+    width: 3rem;
+  }
+}*/

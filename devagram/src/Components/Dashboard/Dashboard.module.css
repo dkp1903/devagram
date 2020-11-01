@@ -1,0 +1,29 @@
+.Main {
+  display: flex;
+  margin: 2rem 8rem;
+}
+.Left {
+  width: 60%;
+  margin-right: 1rem;
+}
+.Right {
+  width: 40%;
+}
+
+@media (max-width: 1000px) {
+  .Main {
+    margin: 2rem 6rem;
+  }
+  .Right {
+    display: none;
+  }
+  .Left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .Main {
+    margin: 2rem 1rem;
+  }
+}

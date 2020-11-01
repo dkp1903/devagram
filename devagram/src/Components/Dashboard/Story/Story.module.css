@@ -1,0 +1,38 @@
+.Story {
+  position: relative;
+}
+
+.Story img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid white;
+}
+
+.Profile {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.15rem;
+}
+
+.Seen .Profile {
+  background-color: #bbb;
+}
+.Seen {
+  order: 2;
+}
+
+.Not-seen .Profile {
+  background-image: var(--unseen-story-border);
+}
+
+.Story p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  color: #888;
+}

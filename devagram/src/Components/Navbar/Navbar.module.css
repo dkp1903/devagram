@@ -1,0 +1,60 @@
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.Navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #a8f0f0;
+  border-bottom: 1px solid gray;
+}
+
+.Search {
+  position: relative;
+}
+.Search input {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+}
+.Search input:focus {
+  border-width: 2px;
+}
+.Search svg {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+}
+
+.Options {
+  display: flex;
+}
+.Option {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}
+.Profile {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.Profile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .Search {
+    display: none;
+  }
+}

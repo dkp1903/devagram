@@ -1,0 +1,33 @@
+.signup-container {
+  margin: 0 auto;
+  min-width: 250px;
+  width: min(450px, 90%);
+  margin: 1rem auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.signup-form {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(350px, 100%);
+}
+
+.desc {
+  font-weight: 500;
+  color: #808080;
+  margin-top: 0.5rem;
+  width: 70%;
+  text-align: center;
+}
+
+.route {
+  font-size: 0.7rem;
+}
