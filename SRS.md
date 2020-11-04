@@ -187,7 +187,7 @@
 
       **Step-By-Step Description :**
 
-      - User provide details of the story that he/she wants to delete.
+      - User provides details of the story that he/she wants to delete.
       - System uses the details to find the story.
       - System then deletes the story.
 
@@ -195,66 +195,66 @@
 
       **Brief Description :**
 
-      - Users can share message to other users. Message can have attachments like image, video, files(txt, doc, pdf etc).
+      - Users can share message to other users. Messages can have attachments like image, video, files(txt, doc, pdf etc).
 
       **Step-By-Step Description :**
 
-      - User provide message(with / without) attachments and details of receiver.
-      - System create socket connection between user and receiver.
-      - System sends the message to receiver.
+      - User provides message(with / without) attachments and details of receiver.
+      - System creates a socket connection between user and receiver.
+      - System then sends the message to the receiver.
 
       ### 1.1.12 Checkout events around
 
       **Brief Description :**
 
-      - User can check events in surroundings and also at other places. To check surrounding events user need to provide his/her location.
+      - Users can check events in surroundings areas and also at other places. To check surrounding events user needs to provide his/her location.
 
       **Step-By-Step Description :**
 
-      - User ask for surrounding events.
-      - System ask for location.
+      - User asks for surrounding events.
+      - System asks for the location.
       - User provides location access.
-      - System shows the events details.
+      - System then shows the events detail.
 
       **or**
 
-      - User ask for events at particular location or user provide some keywords for event.
-      - System shows matched events details.
+      - User asks for events at particular location or user provides some keywords for event.
+      - System then shows matched events details.
 
       ### 1.1.13 Find other developers around
 
       **Brief Description :**
 
-      - User can see developers in surrounding. Only developers will be shown who has provided location details.
+      - User can see developers in their surrounding. Only developers will be shown who has provided location details.
 
       **Step-By-Step Description :**
 
-      - User ask for developers in surroundings.
-      - System verify users location, if location not provided ask for location.
-      - System shows the developers in surroundings.
+      - User asks for developers in their surroundings.
+      - System verifies users location, if location not provided ask for location.
+      - System then shows the developers in users surrounding areas.
 
-      ### 1.1.14 Turn for notification for events
+      ### 1.1.14 Turn on notification for events
 
       **Brief Description :**
 
-      - User can turn on notification for events that he/she is following.
+      - User can turn on notifications for events that he/she is following.
 
       **Step-By-Step Description :**
 
-      - User can turn on the notification for event.
-      - System add user to notification list.
-      - System provide push notification to user according to event.
+      - Users can turn on the notification for events.
+      - System adds the user to the notification list.
+      - System provides push notification to the user according to the event.
 
       ### 1.1.15 See upcoming Hackathons
 
       **Brief Description :**
 
-      - User can see the details of upcoming hackathons.
+      - Users can see the details of upcoming hackathons.
 
       **Step-By-Step Description :**
 
-      - User ask for upcoming hackathons.
-      - System provide details of upcoming hackathons.
+      - User asks for details of upcoming hackathons.
+      - System provides details of upcoming hackathons.
 
       ### 1.1.16 Participate in hackathon
 
@@ -265,32 +265,32 @@
       **Step-By-Step Description :**
 
       - User provide details needed to participate.
-      - System verify details.
-      - System send confirmation mail and confirm the participation.
+      - System verifies details.
+      - System then sends confirmation mail and confirms the participation.
 
-      ### 1.1.17 Invite other for hackathon
+      ### 1.1.17 Invite others for hackathon
 
       **Brief Description :**
 
-      - User can invite other user for hackathon..
+      - User can invite other users for hackathon.
 
       **Step-By-Step Description :**
 
-      - User ask for invitation link.
+      - User asks for invitation link.
       - System verifies user's participation.
-      - System provide invitation link.
+      - System provides invitation link.
 
    2. ### External Interface Requirements
    3. ### System Features<br>
       - #### **Rating the post in start**
         - New post are rated in range of 1-5 start by his fellow developers
       - #### **Notification through mail**
-        - New post are notified through mail
+        - New posts are notified through mail
         - Link to the post are shared through the mail only.
       * #### **Trending posts**
         - Trending posts are made by sorting all the posts based on stars
       * #### **Section for upcoming hackathons**
-        - Upcoming and live hackathons are added in the hackathons sections
+        - Upcoming and live hackathons are added in the hackathons section
         - Leads to more engagement.
       * #### **Section for job applications**
         - Developers looking for a job can easily connect with recruiters.
@@ -298,5 +298,5 @@
       * #### **Chats and Messaging**
         - Great tool for interaction.
         - Code Snippets can be posted with proper formatting.
-        - Allows to share the learning or clear doubts and helps in collaboration.
+        - Allows to share or clear doubts and help in collaboration.
    4. ### Non Functional Requirements
