@@ -74,24 +74,24 @@
 
       **Brief Description :**
 
-      - users new to Devagram need to register to use the platform.
+      - Users new to Devagram need to register to use the platform.
 
       **Step-By-Step Description :**
 
       - To use Devagram users need to register themselves.
-      - user provide registration details to the system.
-      - System use the details and register the user.
+      - Users provide registration details to the system.
+      - System uses the details and registers the user.
 
       ### 1.1.2 Authenticate/ Login
 
       **Brief Description :**
 
-      - users who are registered need to be authenticated.
+      - Users who are registered need to be authenticated.
 
       **Step-By-Step Description :**
 
-      - user provide credentials to the system.
-      - System verify the details and provide according result.
+      - User provides credentials to the system.
+      - System verifies the details and provides result accordingly.
 
       ### 1.1.3 Share posts
 
@@ -101,35 +101,35 @@
 
       **Step-By-Step Description :**
 
-      - user provide details of post that he/she want to share to system.
-      - System work on the details of posts.
-      - System shares the posts and give particular details.
+      - User provides details of post that he/she wants to share to system.
+      - System works on the details of posts.
+      - System shares the posts and gives particular details.
 
       ### 1.1.4 Update posts
 
       **Brief Description :**
 
-      - Users can update only own posts. Update includes changing content.
+      - Users can update only their own posts. Update includes changing content.
 
       **Step-By-Step Description :**
 
-      - User provide details of post that he/she want to update.
-      - System work on the details of posts.
-      - If post exists then system ask for update details else show particular message.
-      - User provide update details.
-      - System update the post.
+      - User provides details of the post that he/she wants to update.
+      - System works on the details of post.
+      - If post exists then system asks for update details else shows a particular message.
+      - User provides update details.
+      - System then updates the post.
 
       ### 1.1.5 Delete posts
 
       **Brief Description :**
 
-      - users can delete only own posts.
+      - Users can delete only their own posts.
 
       **Step-By-Step Description :**
 
-      - User provide details of post that he/she want to delete.
-      - System work on the details of posts.
-      - If post exists then system deletes it else show particular message.
+      - User provides details of the post that he/she wants to delete.
+      - System then works on the details of the post.
+      - If post exists then system deletes it. Else shows a particular message.
 
       ### 1.1.6 See other's posts
 
@@ -139,15 +139,15 @@
 
       **Step-By-Step Description :**
 
-      - User provide details of post that he/she want to see.
-      - System work on the details of posts.
-      - If post exists then system display the post else show particular message.
+      - User provides details of post that he/she wants to see.
+      - System then works on the details of the post.
+      - If post exists then system displays the post. Else shows a particular message.
 
       ### 1.1.7 React to posts
 
       **Brief Description :**
 
-      - Users can react to other's post. React includes comments, likes.
+      - Users can react to each other's post. React includes comments, likes, etc.
 
       **Step-By-Step Description :**
 
@@ -162,34 +162,34 @@
 
       **Step-By-Step Description :**
 
-      - User follow or un-follow other user.
-      - System verify user's action.
-      - System do the according and users following list.
+      - User follows or un-follows another user.
+      - System then verifies user's action.
+      - System does the needful and updates users following list.
 
       ### 1.1.9 Share stories
 
       **Brief Description :**
 
-      - Users can shares stories. Stories can only contain image, text or links and are only available for one day.
+      - Users can shares stories. Stories can contain only image, text or links and are available for a day.
         Stories are not updatable.
 
       **Step-By-Step Description :**
 
-      - User provide details of the story that he/she want to share.
-      - System work on the story details and add story.
-      - After one day system removes the story.
+      - User providea details of the story that he/she wanta to share.
+      - System then works on the story details and adds the story.
+      - After one day system automatically removes the story.
 
       ### 1.1.10 Delete stories
 
       **Brief Description :**
 
-      - Users can only delete own stories.
+      - Users can only delete their own stories.
 
       **Step-By-Step Description :**
 
-      - User provide details of the story that he/she want to delete.
-      - System uses the details finds the story.
-      - System deletes the story.
+      - User provide details of the story that he/she wants to delete.
+      - System uses the details to find the story.
+      - System then deletes the story.
 
       ### 1.1.11 Message other users
 
