@@ -48,7 +48,7 @@ const Post = (props) => {
           <div class="reaction">
             <div class="row">
               <div class="type">
-                <BsHeart/> 
+                <BsHeart className="heart"/> 
               </div>
               <div class="type">
                 <BsChat/> 
