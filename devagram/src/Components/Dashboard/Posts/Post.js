@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import "./Post.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import {Carousel  } from 'react-bootstrap';
+import { BsHeart,BsChat } from "react-icons/bs";
+import {FaRegPaperPlane} from "react-icons/fa";
 
 
 const Post = (props) => {
@@ -42,6 +44,23 @@ const Post = (props) => {
               </Carousel.Item>
             </Carousel>
           </div>
+
+          <div class="reaction">
+            <div class="row">
+              <div class="type">
+                <BsHeart/> 
+              </div>
+              <div class="type">
+                <BsChat/> 
+              </div>
+              <div class="type">
+                <FaRegPaperPlane/> 
+              </div>
+              
+            </div>
+          </div>
+
+
         </div>
       </div>
     </Fragment>
