@@ -1,0 +1,28 @@
+.Story img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid white;
+}
+
+.profile {
+  position: relative;
+  left: 10px;
+  top: -10px;
+}
+
+.desc {
+  margin: 20px auto;
+  text-align: justify;
+}
+
+.post {
+  padding: 10px;
+  margin: 0px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.allPosts {
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
