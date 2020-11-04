@@ -103,7 +103,7 @@
 
       - User provides details of post that he/she wants to share to system.
       - System works on the details of posts.
-      - System shares the posts and gives particular details.
+      - System shares the post and gives particular details.
 
       ### 1.1.4 Update posts
 
