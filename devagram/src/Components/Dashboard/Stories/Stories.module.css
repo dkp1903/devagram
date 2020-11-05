@@ -1,9 +1,9 @@
 .Stories {
   display: flex;
-  background: #eee;
+  background: #fff;
   overflow-x: scroll;
   margin-bottom: 1rem;
-  padding: 0.5rem;
+  padding: 1rem 0.7rem 0.5rem;
   border: 1px solid #ddd;
   border-radius: 3px;
   position: relative;
