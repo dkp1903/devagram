@@ -32,6 +32,14 @@
   font-size: 20px;
 }
 
-.heart {
-  color: red;
+.heart:hover {
+  color: rgb(255, 40, 40);
+}
+
+.comment:hover {
+  color: rgb(104, 104, 223);
+}
+
+.send:hover {
+  color: rgb(149, 255, 220);
 }

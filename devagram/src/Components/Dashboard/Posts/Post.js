@@ -51,10 +51,10 @@ const Post = (props) => {
                 <BsHeart className="heart"/> 
               </div>
               <div class="type">
-                <BsChat/> 
+                <BsChat className="comment"/> 
               </div>
               <div class="type">
-                <FaRegPaperPlane/> 
+                <FaRegPaperPlane className="send"/> 
               </div>
               
             </div>
