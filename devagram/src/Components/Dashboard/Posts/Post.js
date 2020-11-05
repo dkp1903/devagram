@@ -3,7 +3,7 @@ import "./Post.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import {Carousel  } from 'react-bootstrap';
 import { BsHeart,BsChat } from "react-icons/bs";
-import {FaRegPaperPlane} from "react-icons/fa";
+import {FaRegPaperPlane,  FaRegBookmark} from "react-icons/fa";
 
 
 const Post = (props) => {
@@ -56,7 +56,9 @@ const Post = (props) => {
               <div class="type">
                 <FaRegPaperPlane/> 
               </div>
-              
+              <div class="type-bookmark">
+                <FaRegBookmark/> 
+              </div>
             </div>
           </div>
 
