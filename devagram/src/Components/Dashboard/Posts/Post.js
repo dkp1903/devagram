@@ -11,7 +11,7 @@ const Post = (props) => {
       <div class="allPosts">
         <div className="post">
           <div class="Story img">
-            <img src="https://picsum.photos/seed/picsum/200/300"></img>{" "}
+            <img src="https://picsum.photos/seed/picsum/200/300" alt=""></img>{" "}
             <b className="profile">Shankhanil</b>
           </div>
           <div className="desc">

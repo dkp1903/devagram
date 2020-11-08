@@ -9,6 +9,8 @@ nav {
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid rgb(165, 165, 165);
+  background-color: white;
+  z-index: 2;
 }
 .NavContent {
   margin: 0.5em 0;

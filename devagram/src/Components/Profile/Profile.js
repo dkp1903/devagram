@@ -23,6 +23,7 @@ function Profile() {
         >
           <div>
             <img
+              alt=""
               style={{
                 height: "10rem",
                 width: "10rem",
@@ -77,38 +78,47 @@ function Profile() {
         </div>
         <div className={classes.gallery}>
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1574694413209-16c197d7bd61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1552985247-03b1fddb53d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1574694413209-16c197d7bd61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1552985247-03b1fddb53d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1574694413209-16c197d7bd61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
           <img
+            alt=""
             className={classes.image}
             src="https://images.unsplash.com/photo-1552985247-03b1fddb53d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
           />
