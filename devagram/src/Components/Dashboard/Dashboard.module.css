@@ -1,19 +1,11 @@
 .Main {
-  display: flex;
+  display: grid;
+  grid-template: 1fr /1fr 1fr;
   margin: 2rem 8rem;
-}
-.Left {
-  width: 60%;
-  margin-right: 1rem;
-}
-.Right {
-  width: 40%;
+  grid-gap: 0 1rem;
 }
 
 @media (max-width: 1000px) {
-  .Main {
-    margin: 2rem 6rem;
-  }
   .Right {
     display: none;
   }
@@ -22,8 +14,15 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1401px) {
   .Main {
-    margin: 2rem 1rem;
+    grid-template: 1fr /1fr;
+    margin: 2rem 10vw;
+  }
+  .Left {
+    width: 80vw;
+  }
+  .Right {
+    display: none;
   }
 }

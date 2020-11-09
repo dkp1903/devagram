@@ -1,0 +1,7 @@
+.jobsAndHacks {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  place-items: center;
+  margin: 2rem 8rem;
+  grid-gap: 3rem 1rem;
+}
