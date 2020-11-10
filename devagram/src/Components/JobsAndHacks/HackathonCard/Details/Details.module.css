@@ -1,6 +1,5 @@
 .outer {
   position: fixed;
-  display: none;
   width: 100%;
   height: 100%;
   top: 0;
@@ -27,12 +26,12 @@
   background-color: white;
 }
 
-img {
+.event_logo {
   height: 5em;
   width: 10em;
 }
 
-.event-name {
+.event_name {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 900;
   letter-spacing: normal;
