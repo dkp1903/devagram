@@ -23,7 +23,7 @@ function HackathonCard({ title, information, imgURL }) {
       <h6>{sampleInfo.title}</h6>
       <p>{sampleInfo.information}</p>
       {/* using BEM convention for naming classes*/}
-      <button class="learn-more" onClick={on}>
+      <button class={classes.learn_more} onClick={on}>
           Learn more about Imagine Cup  <BsBoxArrowUpRight/>
       </button>
       <div className={classes.hackathoncard__buttons}>
