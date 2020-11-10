@@ -1,5 +1,7 @@
 import React from "react";
 import classes from "./HackathonCard.module.css";
+import Details from "./Details";
+import {BsBoxArrowUpRight} from "react-icons/bs";
 
 function HackathonCard({ title, information, imgURL }) {
   // sample data
@@ -11,16 +13,25 @@ function HackathonCard({ title, information, imgURL }) {
     title: "Imagine Cup",
   };
 
+  function on() {
+    document.getElementsByClassName("outer")[0].style.display = "block";
+  }
+
   return (
     <div className={classes.hackathoncard}>
       <img src={sampleInfo.imgURL} alt={title} />
       <h6>{sampleInfo.title}</h6>
       <p>{sampleInfo.information}</p>
       {/* using BEM convention for naming classes*/}
+      <button class="learn-more" onClick={on}>
+          Learn more about Imagine Cup  <BsBoxArrowUpRight/>
+      </button>
       <div className={classes.hackathoncard__buttons}>
         <button>Participate</button>
       </div>
+      <Details/>
     </div>
+    
   );
 }
 
