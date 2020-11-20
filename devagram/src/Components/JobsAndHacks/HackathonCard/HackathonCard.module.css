@@ -34,7 +34,6 @@
   outline: 0;
   padding: 6px 15px;
 }
-
 .learn_more {
   padding: 0em 1em 1em 1em;
   font-family: "Nunito Sans", sans-serif;
@@ -55,4 +54,8 @@
   border: none;
   background: none;
   outline: none;
+@media (max-width: 1336px) {
+  .hackathoncard {
+    width: 50vw;
+  }
 }

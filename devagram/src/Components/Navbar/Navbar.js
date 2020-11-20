@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Navbar.module.css";
 import Title from "../Auth/Title/Title";
-import useHandleChange from "../Hooks/HandleInputChange";
 import {
   FaSearch,
   FaHome,
@@ -14,7 +13,7 @@ import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
-  const [search, setText] = useHandleChange();
+  const [searchText, setSearchText] = useState("");
 
   return (
     <>
@@ -24,8 +23,8 @@ const Navbar = (props) => {
           <div className={classes.Search}>
             <input
               type="text"
-              value={search}
-              onChange={setText}
+              value={searchText}
+              onChange={setSearchText}
               name="search"
               required
               placeholder="Search"
