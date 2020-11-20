@@ -1,36 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Title from "../Title/Title";
 import Button from "../../Button/Button";
 import Input from "../Input/Input";
-import useHandleChange from "../../Hooks/HandleInputChange";
 import { Link } from "react-router-dom";
 import classes from "./Signup.module.css";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
 
+const INITIAL_STATE_FORM_STATE = {
+  email: "",
+  name: "",
+  username: "",
+  password: "",
+};
+
 const Signup = () => {
-  const [email, setEmail] = useHandleChange();
-  const [name, setName] = useHandleChange();
-  const [username, setUsername] = useHandleChange();
-  const [password, setPassword] = useHandleChange();
+  
+  const [formValues, setFormValues] = useState({ ...INITIAL_STATE_FORM_STATE });
 
+  // Handles changes to each input
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  // Handles Submit Function
   const handleSubmit = (e) => {
-    /* To make the api call to post the user data once submitted */
+    e.preventDefault(); // prevents refresh
 
-    e.preventDefault();
-    const formData = {
-      email: email,
-      fullname: name,
-      username: username,
-      password: password,
-    };
+    console.log(formValues);  
 
-    console.log(formData);
-
-    setEmail("");
-    setName("");
-    setUsername("");
-    setPassword("");
+    setFormValues({ ...INITIAL_STATE_FORM_STATE }); // back to empty form
   };
 
   return (
@@ -44,38 +47,45 @@ const Signup = () => {
           aria-labelledby="label-email"
           type="email"
           name="email"
-          value={email}
-          onChange={setEmail}
+          value={formValues.email}
+          onChange={handleChange}
           required
         />
         <Input
           aria-labelledby="label-fullname"
           type="text"
           name="name"
-          value={name}
-          onChange={setName}
+          value={formValues.name}
+          onChange={handleChange}
           required
         />
         <Input
           aria-labelledby="label-username"
           type="text"
           name="username"
-          value={username}
-          onChange={setUsername}
+          value={formValues.username}
+          onChange={handleChange}
           required
         />
         <Input
           aria-labelledby="label-password"
           type="password"
           name="password"
-          value={password}
-          onChange={setPassword}
+          value={formValues.password}
+          onChange={handleChange}
           required
         />
         <Button
           type="submit"
           btnType="Primary"
-          disabled={!(email && name && username && password)}
+          disabled={
+            !(
+              formValues.email &&
+              formValues.name &&
+              formValues.username &&
+              formValues.password
+            )
+          }
         >
           Sign Up
         </Button>

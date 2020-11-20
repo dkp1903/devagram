@@ -34,3 +34,8 @@
   outline: 0;
   padding: 6px 15px;
 }
+@media (max-width: 1336px) {
+  .hackathoncard {
+    width: 50vw;
+  }
+}

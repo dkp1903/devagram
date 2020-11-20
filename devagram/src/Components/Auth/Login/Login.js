@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 
 import Title from "../Title/Title";
@@ -7,11 +7,10 @@ import Input from "../Input/Input";
 import Button from "../../Button/Button";
 import { FaFacebook } from "react-icons/fa";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
-import useHandleChange from "../../Hooks/HandleInputChange";
 
 const Login = () => {
-  const [email, setEmail] = useHandleChange();
-  const [password, setPassword] = useHandleChange();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isAuth, setAuth] = useState(false);
 
@@ -47,7 +46,7 @@ const Login = () => {
   }
 
   return (
-    <Fragment>
+    <>
       <div className={classes.Login}>
         <Title title="Devagram" />
         {error && (
@@ -89,7 +88,7 @@ const Login = () => {
       <section className="section-bar">
         Create new account ? <Link to="/signup">Signup</Link>
       </section>
-    </Fragment>
+    </>
   );
 };
 
