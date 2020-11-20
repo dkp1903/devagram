@@ -7,6 +7,7 @@ import classes from "./JobsAndHacks.module.css";
 
 function JobsAndHacks() {
   const [cards, setCards] = useState([]);
+
   useEffect(() => {
     /**
      * Fetch stories here
