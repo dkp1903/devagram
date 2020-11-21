@@ -23,9 +23,6 @@ const Login = () => {
 
     console.log(formData);
 
-    setEmail("");
-    setPassword("");
-
     /**
      * To make the api call to post the user data once submitted
      * below is example of success and failure cases
@@ -33,8 +30,12 @@ const Login = () => {
 
     if (email === "app@devagram.com" && password === "devagram2020") {
       setAuth(true);
+      setEmail("");
+      setPassword("");
     } else {
       setError("Invalid credentials");
+      setEmail("");
+      setPassword("");
       setTimeout(() => {
         setError("");
       }, 5000);
@@ -56,7 +57,7 @@ const Login = () => {
           <Input
             type="email"
             value={email}
-            onChange={setEmail}
+            onChange={(e) => setEmail(e.target.value)}
             name="email"
             required
             aria-labelledby="label-email"
@@ -64,7 +65,7 @@ const Login = () => {
           <Input
             type="password"
             value={password}
-            onChange={setPassword}
+            onChange={(e) => setPassword(e.target.value)}
             name="password"
             required
             aria-labelledby="label-password"

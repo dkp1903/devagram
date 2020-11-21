@@ -1,10 +1,7 @@
-nav {
-  position: sticky;
+.Navbar {
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
-}
-.Navbar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,21 +51,44 @@ nav {
 .Burger {
   display: none;
 }
+.SmallScreen {
+  position: absolute;
+  top: 3.8rem;
+  right: 1rem;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 5px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 200ms;
+}
+.SmallScreen a {
+  display: block;
+  color: black;
+  padding: 0.25rem;
+}
+.Open {
+  opacity: 1 !important;
+  transform: scaleY(1) !important;
+  transition: all 200ms;
+}
+.SmallScreen .SmallOption + .SmallOption {
+  border-top: 1px solid gray;
+}
+.SmallScreen a span {
+  margin-left: 0.5rem;
+}
+
 @media (max-width: 900px) {
   .Search {
     display: none;
   }
 }
 @media (max-width: 850px) {
-  .NavContent {
-    justify-content: center;
-  }
   .Burger {
     display: block;
-    position: absolute;
-    top: 12%;
     font-size: 2em;
-    right: 6vw;
   }
   .Option {
     display: none;

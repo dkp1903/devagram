@@ -22,13 +22,13 @@ function HackathonCard({ title, information, imgURL }) {
   return (
     <>
       {isModalOpen ? <Details click={() => setModalOpen(false)} /> : null}
-      <div className={classes.hackathoncard}>
+      <div className={classes.hackathoncard} style={{}}>
         <img src={sampleInfo.imgURL} alt={title} />
         <h6>{sampleInfo.title}</h6>
         <p>{sampleInfo.information}</p>
         {/* using BEM convention for naming classes*/}
         <button
-          class={classes.learn_more}
+          className={classes.learn_more}
           onClick={() => {
             setModalOpen(true);
             console.log("Clicked!");

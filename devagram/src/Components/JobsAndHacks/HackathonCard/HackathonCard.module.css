@@ -1,11 +1,15 @@
 .hackathoncard {
-  background-color: rgb(245, 245, 245);
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border: 3px solid black;
 }
 .hackathoncard img {
-  object-fit: cover;
-  border: 3px solid black;
+  object-fit: contain;
   height: 300px;
-  width: 350px;
+  width: 100%;
 }
 .hackathoncard h6 {
   font-size: 1.6em;
@@ -54,8 +58,4 @@
   border: none;
   background: none;
   outline: none;
-@media (max-width: 1336px) {
-  .hackathoncard {
-    width: 50vw;
-  }
 }

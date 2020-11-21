@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Post from "./Post/Post";
 // import axios from "axios"; // import this fetching posts
 import classes from "./Feeds.module.css";
+import { feeds } from "./fakeFeed";
 // information regarding the post will come from the file Posts.js having the the get request to /api/post
 
 const Feeds = () => {
@@ -24,16 +25,19 @@ const Feeds = () => {
         });
     */
     // Setting Posts
-    setPosts([...Array(10)]); //remove this when axios is added
+    setPosts(feeds); //remove this when axios is added
   }, []);
 
   return (
     <>
       <Navbar />
-      <div className={classes.content__container}>
+      <div
+        className={classes.content__container}
+        style={{ paddingTop: "3rem" }}
+      >
         <div className={classes.content}>
           {posts.map((post, index) => (
-            <Post key={index} />
+            <Post post={post} key={post.id} />
           ))}
         </div>
       </div>
