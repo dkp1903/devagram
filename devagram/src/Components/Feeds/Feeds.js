@@ -1,33 +1,39 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import Posts from "./Posts/Posts";
-import "./Feeds.css";
-import { feeds } from "./fakeFeed";
-
-//information regarding the post will come from the file Posts.js having the the get require to /allPost
+import Post from "./Post/Post";
+// import axios from "axios"; // import this fetching posts
+import classes from "./Feeds.module.css";
+// information regarding the post will come from the file Posts.js having the the get request to /api/post
 
 const Feeds = () => {
   const [posts, setPosts] = useState([]);
-
   useEffect(() => {
     /**
-     * Here we will fetch all posts from backend
+     * Fetch stories here
      */
-    const allPosts = feeds;
-    setPosts(allPosts);
+    /** 
+      axios
+        .get("https://examples.com/example.json")
+        .then((response) => {
+          // handle success
+          // setPosts(response.data);
+        })
+        .catch((error) => {
+          // handle error
+          console.log(error);
+        });
+    */
+    // Setting Posts
+    setPosts([...Array(10)]); //remove this when axios is added
   }, []);
+
   return (
     <>
       <Navbar />
-      <div className="content-container">
-        <div className="content">
-          {posts.map((post) => (
-            <Posts
-              key={post.id}
-              photoUrl={post.photoUrl}
-              likes={post.likes}
-              comments={post.comments}
-            />
+      <div className={classes.content__container}>
+        <div className={classes.content}>
+          {posts.map((post, index) => (
+            <Post key={index} />
           ))}
         </div>
       </div>

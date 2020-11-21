@@ -1,0 +1,55 @@
+.outer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.container {
+  padding: 1em 3em 2.5em 3.5em;
+  text-align: justify;
+  -webkit-box-align: center;
+  max-width: 650px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.event_logo {
+  height: 5em;
+  width: 10em;
+}
+
+.event_name {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
+  letter-spacing: normal;
+  color: rgb(39, 51, 57);
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.list {
+  padding-top: 30px;
+}
+
+li {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgb(39, 51, 57);
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}

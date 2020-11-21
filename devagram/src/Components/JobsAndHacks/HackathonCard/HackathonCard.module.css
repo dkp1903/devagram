@@ -1,0 +1,61 @@
+.hackathoncard {
+  background-color: rgb(245, 245, 245);
+}
+.hackathoncard img {
+  object-fit: cover;
+  border: 3px solid black;
+  height: 300px;
+  width: 350px;
+}
+.hackathoncard h6 {
+  font-size: 1.6em;
+  font-weight: 800;
+  padding: 0.5em 1em 0;
+}
+.hackathoncard p {
+  padding: 0 2em;
+  color: rgb(88, 88, 88);
+  font-size: 0.8em;
+  width: 350px;
+  max-height: 100px;
+  overflow-y: hidden;
+}
+.hackathoncard__buttons {
+  padding: 0 1.7em 0.8em;
+  display: flex;
+  justify-content: flex-start;
+}
+.hackathoncard__buttons button {
+  background-color: #0069ff;
+  font-weight: 800;
+  font-size: 13px;
+  color: white;
+  border: none;
+  outline: 0;
+  padding: 6px 15px;
+}
+.learn_more {
+  padding: 0em 1em 1em 1em;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(55, 112, 255);
+  border: none;
+  background: none;
+}
+
+.learn_more:hover {
+  color: hsl(223, 96%, 39%);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.learn_more:focus {
+  border: none;
+  background: none;
+  outline: none;
+@media (max-width: 1336px) {
+  .hackathoncard {
+    width: 50vw;
+  }
+}

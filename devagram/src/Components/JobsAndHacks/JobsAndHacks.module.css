@@ -1,0 +1,13 @@
+.jobsAndHacks {
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr;
+  place-items: center;
+  margin: 2rem 8rem;
+  grid-gap: 3rem 1rem;
+}
+@media (max-width: 1336px) {
+  .jobsAndHacks {
+    grid-template: 1fr / 1fr 1fr;
+    margin: 2rem 0;
+  }
+}

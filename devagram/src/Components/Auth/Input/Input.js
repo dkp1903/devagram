@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import classes from "./Input.module.css";
 
 const Input = (props) => {
   const { type, value, change, name } = props;
   return (
-    <Fragment>
+    <>
       <label className={classes.label}>
         <input
           className={classes.Input}
@@ -16,7 +16,7 @@ const Input = (props) => {
         />
         <small className={classes.Small}>{name.toUpperCase()}</small>
       </label>
-    </Fragment>
+    </>
   );
 };
 

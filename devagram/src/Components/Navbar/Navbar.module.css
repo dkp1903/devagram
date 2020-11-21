@@ -6,54 +6,71 @@ nav {
 }
 .Navbar {
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(165, 165, 165);
+  background-color: white;
+  z-index: 2;
+}
+.NavContent {
+  margin: 0.5em 0;
+  display: flex;
+  width: 80vw;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 8rem;
-  background: #9fdcff;
-  border-bottom: 1px solid rgb(165, 165, 165);
 }
 .Search {
   position: relative;
+  margin: 0 2em;
+  display: flex;
+  min-width: 300px;
+  align-items: center;
 }
 .Search input {
   height: 100%;
   width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  max-width: 50vw;
   outline: none;
   border: 1px solid #ddd;
-}
-.Search input:focus {
-  border-width: 2px;
-}
-.Search svg {
-  position: absolute;
-  right: 10px;
-  top: 25%;
+  align-items: center;
+  font-weight: 700;
+  color: #5a5a5a;
 }
 
+.Search svg {
+  position: relative;
+  top: -2px;
+  left: -40px;
+}
 .Options {
   display: flex;
 }
 .Option {
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
+  margin: 0 0.8rem;
+  font-size: 1.5em;
 }
-.Profile {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  overflow: hidden;
+.Burger {
+  display: none;
 }
-.Profile img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .Search {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  .NavContent {
+    justify-content: center;
+  }
+  .Burger {
+    display: block;
+    position: absolute;
+    top: 12%;
+    font-size: 2em;
+    right: 6vw;
+  }
+  .Option {
     display: none;
   }
 }
