@@ -6,18 +6,17 @@ import Post from "./Posts/Post";
 
 const Dashboard = () => {
   return (
-    <>
+    <div style={{ overflowX: "hidden", paddingTop: "4rem" }}>
       <Navbar />
       <main className={classes.Main}>
         <div className={classes.Left}>
           <Stories />
-          <div className="posts">
+          <div className="posts" style={{ marginBottom: "2rem" }}>
             <Post />
           </div>
         </div>
-        <div className={classes.Right}>small profile and other links</div>
       </main>
-    </>
+    </div>
   );
 };
 

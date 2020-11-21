@@ -1,13 +1,28 @@
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
 }
 .image {
-  width: 30%;
-  margin: 10px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 .bio {
   margin-top: 20px;
+}
+.Profile {
+  margin: 2rem 8rem;
+}
+
+@media (max-width: 1401px) {
+  .Profile {
+    margin: 2rem 10vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .Profile {
+    margin: 0.5rem;
+  }
 }

@@ -8,6 +8,7 @@ const Details = ({ click }) => {
       <div className={classes.container}>
         <center>
           <img
+            alt="logo"
             className={classes.event_logo}
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNjVQBQoClbHF1pSJ4oRdXPZ59bidTgQ9OZg&usqp=CAU"
           ></img>

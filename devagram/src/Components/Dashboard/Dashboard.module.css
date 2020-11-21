@@ -1,28 +1,26 @@
 .Main {
-  display: grid;
-  grid-template: 1fr /1fr 1fr;
+  display: flex;
+  justify-content: center;
   margin: 2rem 8rem;
-  grid-gap: 0 1rem;
-}
-
-@media (max-width: 1000px) {
-  .Right {
-    display: none;
-  }
-  .Left {
-    width: 100%;
-  }
 }
 
 @media (max-width: 1401px) {
   .Main {
-    grid-template: 1fr /1fr;
     margin: 2rem 10vw;
   }
   .Left {
     width: 80vw;
   }
-  .Right {
-    display: none;
+}
+
+@media (max-width: 1000px) {
+  .Left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .Main {
+    margin: 0.5rem;
   }
 }

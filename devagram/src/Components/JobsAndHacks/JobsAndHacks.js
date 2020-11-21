@@ -30,7 +30,7 @@ function JobsAndHacks() {
   return (
     <>
       <Navbar />
-      <div className={classes.jobsAndHacks}>
+      <div className={classes.jobsAndHacks} style={{ paddingTop: "4rem" }}>
         {cards.map((card, index) => (
           <HackthonCard key={index} />
         ))}

@@ -37,3 +37,10 @@
 .Right-arrow {
   right: 1rem;
 }
+
+@media (max-width: 600px) {
+  .Left-arrow,
+  .Right-arrow {
+    display: none !important;
+  }
+}

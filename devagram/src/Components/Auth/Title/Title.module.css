@@ -1,5 +1,4 @@
 .Title {
-  /* font-family: "Sansita Swashed", cursive; */
-  font-weight: 100;
   color: black;
+  font-size: max(3vw, 20px);
 }
