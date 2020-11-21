@@ -86,8 +86,8 @@ const Login = () => {
           </Button>
         </div>
       </div>
-      <section>
-        Already have Account ? <Link to="/signup">Signup</Link>
+      <section className="section-bar">
+        Create new account ? <Link to="/signup">Signup</Link>
       </section>
     </Fragment>
   );

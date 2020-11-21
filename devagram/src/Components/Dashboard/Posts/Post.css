@@ -1,0 +1,54 @@
+.Story img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid white;
+}
+
+.profile {
+  position: relative;
+  left: 10px;
+  top: -10px;
+}
+
+.desc {
+  margin: 20px auto;
+  text-align: justify;
+}
+
+.post {
+  padding: 10px;
+  margin: 0px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.allPosts {
+  padding: 5px;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.type {
+  margin: 0 10px;
+  font-size: 20px;
+  font-size: 25px;
+  padding-left: 0.3rem;
+}
+
+.type-bookmark {
+  margin: 0 10px;
+  font-size: 25px;
+  padding-left: 39rem;
+}
+
+.heart:hover {
+  color: rgb(255, 40, 40);
+}
+
+.comment:hover {
+  color: rgb(104, 104, 223);
+}
+
+.send:hover {
+  color: rgb(149, 255, 220);
+}

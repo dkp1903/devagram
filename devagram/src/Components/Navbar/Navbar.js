@@ -3,6 +3,7 @@ import classes from "./Navbar.module.css";
 import Title from "../Auth/Title/Title";
 import useHandleChange from "../Hooks/HandleInputChange";
 import { FaSearch, FaHome, FaInbox, FaCompass } from "react-icons/fa";
+import { AiFillCode } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
@@ -43,6 +44,11 @@ const Navbar = (props) => {
           <div className={classes.Option}>
             <Link to="/feeds">
               <FaCompass style={{ color: "black" }} />
+            </Link>
+          </div>
+          <div className={classes.Option}>
+            <Link to="/jobsAndHack">
+              <AiFillCode style={{ color: "black" }} />
             </Link>
           </div>
           <div className={classes.Option}>

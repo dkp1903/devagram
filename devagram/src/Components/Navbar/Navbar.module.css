@@ -9,11 +9,10 @@ nav {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: #a8f0f0;
-  border-bottom: 1px solid gray;
+  padding: 0.7rem 8rem;
+  background: #9fdcff;
+  border-bottom: 1px solid rgb(165, 165, 165);
 }
-
 .Search {
   position: relative;
 }
