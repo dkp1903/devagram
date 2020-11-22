@@ -10,6 +10,7 @@ import Feeds from "./Components/Feeds/Feeds";
 import JobsAndHacks from "./Components/JobsAndHacks/JobsAndHacks";
 import DisplayStory from "./Components/Dashboard/Stories/DisplayStory/DisplayStory";
 import NotFound from "./Components/NotFound/NotFound";
+import Connection from './Components/Connection/Connection'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/profile" component={Profile} />
         <Route path="/feeds" component={Feeds} />
         <Route path="/jobsAndHack" component={JobsAndHacks} />
+        <Route path="/connect" component={Connection} />
         <Route path="/story/:user/:id" component={DisplayStory} />
         <Route component={NotFound} />
       </Switch>

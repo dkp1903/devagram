@@ -7,6 +7,7 @@ import {
   FaInbox,
   FaCompass,
   FaHamburger,
+  FaUsers
 } from "react-icons/fa";
 import { AiFillCode } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
@@ -52,6 +53,11 @@ const Navbar = (props) => {
               </Link>
             </div>
             <div className={classes.Option}>
+              <Link to="/connect">
+                <FaUsers style={{ color: "black" }} />
+              </Link>
+            </div>
+            <div className={classes.Option}>
               <Link to="/jobsAndHack">
                 <AiFillCode style={{ color: "black" }} />
               </Link>
@@ -88,6 +94,12 @@ const Navbar = (props) => {
             <Link to="/feeds">
               <FaCompass style={{ color: "black" }} />
               <span>Explore-feeds</span>
+            </Link>
+          </div>
+          <div className={classes.SmallOption}>
+            <Link to="/connect">
+              <FaUsers style={{ color: "black" }} />
+              <span>Connect</span>
             </Link>
           </div>
           <div className={classes.SmallOption}>
