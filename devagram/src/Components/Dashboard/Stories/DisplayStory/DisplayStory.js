@@ -4,6 +4,7 @@ import { stories as dummyStories } from "../dummyStory";
 import Stories from "react-insta-stories";
 import { Redirect, Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 const DisplayStory = (props) => {
   /**
@@ -11,28 +12,42 @@ const DisplayStory = (props) => {
    */
 
   const userId = +props.match.params.id;
-  const user = dummyStories.find((story) => story.userId === userId);
-  if (!user) {
-    return <Redirect to="/not-found" />;
-  }
+  const userIndex = dummyStories.findIndex((story) => story.userId === userId);
+  const user = dummyStories[userIndex];
+  const [currentUser, setCurrentUser] = useState(user);
+  const [index, setIndex] = useState(userIndex);
+  console.log("re-render");
+  const gotoNextUser = () => {
+    setCurrentUser(dummyStories[index + 1]);
+    setIndex((prevIndex) => prevIndex + 1);
+    dummyStories[index + 1]
+      ? props.history.push(
+          `/story/${dummyStories[index + 1].author}/${
+            dummyStories[index + 1].userId
+          }`
+        )
+      : props.history.push("/dashboard");
+  };
+
   return (
     <Fragment>
-      <div className={classes.DisplayStory}>
-        <Link to="/dashboard" className={classes.CloseBtn}>
-          <FaTimes />
-        </Link>
-        <div className={classes.StoryContainer}>
-          <div className={classes.UserData}>
-            <img src={user.authorProfile} alt="profile" />
-            <p style={{ marginLeft: "0.5rem" }}>{user.author}</p>
+      {currentUser ? (
+        <div className={classes.DisplayStory}>
+          <Link to="/dashboard" className={classes.CloseBtn}>
+            <FaTimes />
+          </Link>
+          <div className={classes.StoryContainer}>
+            <Stories
+              stories={currentUser.stories}
+              height={"100%"}
+              onAllStoriesEnd={gotoNextUser}
+              currentIndex={0}
+            />
           </div>
-          <Stories
-            stories={user.stories}
-            height={"100%"}
-            onAllStoriesEnd={() => console.log("ended")}
-          />
         </div>
-      </div>
+      ) : (
+        <Redirect to="/dashboard" />
+      )}
     </Fragment>
   );
 };

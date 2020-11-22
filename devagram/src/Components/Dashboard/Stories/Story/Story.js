@@ -6,7 +6,7 @@ const Story = (props) => {
   return (
     <Fragment>
       <Link
-        to={`/story/${props.user.userId}`}
+        to={`/story/${props.user.author}/${props.user.userId}`}
         style={{ textDecoration: "none" }}
         className={[
           classes.Story,

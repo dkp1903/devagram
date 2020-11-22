@@ -32,7 +32,7 @@ function App() {
         <Route path="/profile" component={Profile} />
         <Route path="/feeds" component={Feeds} />
         <Route path="/jobsAndHack" component={JobsAndHacks} />
-        <Route path="/story/:id" component={DisplayStory} />
+        <Route path="/story/:user/:id" component={DisplayStory} />
         <Route component={NotFound} />
       </Switch>
     </div>

@@ -13,6 +13,12 @@ export const stories = [
         url: "https://picsum.photos/1080/1920",
         type: "image",
         userId: 1,
+        header: {
+          heading: "Manan",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars2.githubusercontent.com/u/52067783?s=460&u=212f06bdac348e4ac59204857029ed7d27a2466b&v=4",
+        },
       },
       {
         id: 2,
@@ -20,9 +26,21 @@ export const stories = [
           "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
         type: "video",
         userId: 1,
+        header: {
+          heading: "Manan",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars2.githubusercontent.com/u/52067783?s=460&u=212f06bdac348e4ac59204857029ed7d27a2466b&v=4",
+        },
       },
       {
         id: 3,
+        header: {
+          heading: "Manan",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars2.githubusercontent.com/u/52067783?s=460&u=212f06bdac348e4ac59204857029ed7d27a2466b&v=4",
+        },
         content: ({ action, isPaused }) => {
           return (
             <div style={contentStyle}>
@@ -58,6 +76,12 @@ export const stories = [
         url: "https://picsum.photos/1080/1920",
         type: "image",
         userId: 2,
+        header: {
+          heading: "DKP",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars0.githubusercontent.com/u/39042169?s=100&v=4",
+        },
       },
       {
         id: 2,
@@ -65,9 +89,21 @@ export const stories = [
           "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
         type: "video",
         userId: 2,
+        header: {
+          heading: "DKP",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars0.githubusercontent.com/u/39042169?s=100&v=4",
+        },
       },
       {
         id: 3,
+        header: {
+          heading: "DKP",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars0.githubusercontent.com/u/39042169?s=100&v=4",
+        },
         content: ({ action, isPaused }) => {
           return (
             <div style={contentStyle}>
@@ -102,6 +138,12 @@ export const stories = [
         url: "https://picsum.photos/1080/1920",
         type: "image",
         userId: 3,
+        header: {
+          heading: "JOHN",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars1.githubusercontent.com/u/43730525?s=100&v=4",
+        },
       },
       {
         id: 2,
@@ -109,9 +151,21 @@ export const stories = [
           "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
         type: "video",
         userId: 3,
+        header: {
+          heading: "JOHN",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars1.githubusercontent.com/u/43730525?s=100&v=4",
+        },
       },
       {
         id: 3,
+        header: {
+          heading: "JOHN",
+          subheading: "Posted 30m ago",
+          profileImage:
+            "https://avatars1.githubusercontent.com/u/43730525?s=100&v=4",
+        },
         content: ({ action, isPaused }) => {
           return (
             <div style={contentStyle}>
