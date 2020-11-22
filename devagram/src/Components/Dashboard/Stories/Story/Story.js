@@ -1,20 +1,23 @@
 import React, { Fragment } from "react";
 import classes from "./Story.module.css";
+import { Link } from "react-router-dom";
 
 const Story = (props) => {
   return (
     <Fragment>
-      <div
+      <Link
+        to={`/story/${props.user.userId}`}
+        style={{ textDecoration: "none" }}
         className={[
           classes.Story,
-          props.story.isSeen ? classes.Seen : classes["Not-seen"],
+          props.user.isSeen ? classes.Seen : classes["Not-seen"],
         ].join(" ")}
       >
         <div className={classes.Profile}>
-          <img src={props.story.authorProfile} alt="Story" />
+          <img src={props.user.authorProfile} alt="Story" />
         </div>
-        <p>{props.story.author}</p>
-      </div>
+        <p>{props.user.author}</p>
+      </Link>
     </Fragment>
   );
 };
