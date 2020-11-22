@@ -1,0 +1,51 @@
+.DisplayStory {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.StoryContainer {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.UserData {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  z-index: 2222222;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+.UserData img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.CloseBtn {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1000000000;
+}
+
+@media (max-width: 600px) {
+  .StoryContainer {
+    height: 100%;
+  }
+  .CloseBtn {
+    top: 90%;
+  }
+}

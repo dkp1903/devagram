@@ -29,8 +29,8 @@ const Post = (props) => {
 
             <img
               className="d-block w-100"
-              src="https://image.shutterstock.com/image-photo/summer-green-rural-nature-landscape-600w-1711600924.jpg"
-              alt="Third slide"
+              src="https://images.unsplash.com/photo-1602526430780-782d6b1783fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+              alt="post"
             />
           </div>
 

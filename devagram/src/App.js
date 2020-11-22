@@ -8,6 +8,8 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Profile from "./Components/Profile/Profile";
 import Feeds from "./Components/Feeds/Feeds";
 import JobsAndHacks from "./Components/JobsAndHacks/JobsAndHacks";
+import DisplayStory from "./Components/Dashboard/Stories/DisplayStory/DisplayStory";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/profile" component={Profile} />
         <Route path="/feeds" component={Feeds} />
         <Route path="/jobsAndHack" component={JobsAndHacks} />
+        <Route path="/story/:user/:id" component={DisplayStory} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   );

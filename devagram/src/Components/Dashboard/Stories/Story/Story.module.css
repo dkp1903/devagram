@@ -1,8 +1,14 @@
 .Story {
   position: relative;
+  transition: all 200ms;
+}
+.Story:active {
+  transform: scale(0.9);
+  transition: all 200ms;
 }
 
 .Story img {
+  cursor: pointer;
   height: 3.5rem;
   width: 3.5rem;
   border-radius: 50%;

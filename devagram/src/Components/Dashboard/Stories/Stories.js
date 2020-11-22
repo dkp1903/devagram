@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Story from "../Story/Story";
+import Story from "./Story/Story";
 import { stories as dummyStories } from "./dummyStory";
 import classes from "./Stories.module.css";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
@@ -11,7 +11,7 @@ const Stories = (props) => {
 
   useEffect(() => {
     /**
-     * Here i am using dummy stories but we need to fetch stories here from Database
+     * Here i am using dummy stories but we need to fetch stories here from Database and add to redux store
      */
     const dummyData = dummyStories;
     setStories(dummyData);
@@ -37,8 +37,8 @@ const Stories = (props) => {
   return (
     <div style={{ position: "relative" }}>
       <div ref={storyRef} className={classes.Stories}>
-        {stories.map((story) => (
-          <Story key={story.id} story={story} />
+        {stories.map((user) => (
+          <Story key={user.userId} story={user.stories} user={user} />
         ))}
       </div>
       <div
