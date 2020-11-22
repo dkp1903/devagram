@@ -52,6 +52,9 @@
 .send:hover {
   color: rgb(149, 255, 220);
 }
+.bookmark:hover {
+  color: rgba(255, 217, 0, 0.815);
+}
 
 .reaction .left {
   display: flex;
