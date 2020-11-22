@@ -5,6 +5,9 @@
   display: grid;
   grid-template-columns: auto auto;
 }
+.jobs-container {
+  top: 400px;
+}
 
 /* .jobs-container {
   width: 960px;
@@ -12,7 +15,6 @@
   position: relative;
   border: 2px solid black;
 } */
-
 .card-container {
   margin: 15px;
   position: relative;

@@ -48,7 +48,7 @@ const Post = (props) => {
                 </div>
               </div>
               <div className="type">
-                <FaRegBookmark />
+                <FaRegBookmark className="bookmark" />
               </div>
             </div>
           </div>
