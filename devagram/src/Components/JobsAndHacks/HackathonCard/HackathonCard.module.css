@@ -6,12 +6,11 @@
   overflow: hidden;
   animation: scl 0.5s ease-in-out;
   transform-origin: left center;
-  /* border: 3px solid black; */
   border-radius: 20px;
-  box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .hackathoncard:hover {
-  box-shadow: 7px 7px 15px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease-in;
 }
 .hackathoncard img {
@@ -50,7 +49,7 @@
 }
 .hackathoncard__buttons button:hover {
   background-color: #03429b;
-  box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }

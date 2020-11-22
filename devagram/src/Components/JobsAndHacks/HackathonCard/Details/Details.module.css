@@ -25,11 +25,22 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .event_logo {
   height: 5em;
   width: 10em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  object-fit: cover;
 }
 
 .event_name {
@@ -53,4 +64,11 @@ li {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.3rem;
 }
