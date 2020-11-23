@@ -17,7 +17,7 @@ function Connection() {
       <Navbar />
       <div className="connect">
         {follow.map((user) => (
-          <div className="card">
+          <div className="card" key={user.id}>
             <img src={user.profileUrl} className="card-image" alt={user.name} />
             <div className="card-title">{user.name}</div>
 
