@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
+import PrivateRoute from "./route/PrivateRoute";
+
 import Home from "./Components/Home/Home";
 import Login from "./Components/Auth/Login/Login";
 import Signup from "./Components/Auth/Signup/Signup";
@@ -10,7 +12,7 @@ import Feeds from "./Components/Feeds/Feeds";
 import JobsAndHacks from "./Components/JobsAndHacks/JobsAndHacks";
 import DisplayStory from "./Components/Dashboard/Stories/DisplayStory/DisplayStory";
 import NotFound from "./Components/NotFound/NotFound";
-import Connection from './Components/Connection/Connection'
+import Connection from "./Components/Connection/Connection";
 
 function App() {
   return (
@@ -29,13 +31,13 @@ function App() {
           path="/signup"
           component={() => <Home child={Signup} title="Sign Up" />}
         />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/feeds" component={Feeds} />
-        <Route path="/jobsAndHack" component={JobsAndHacks} />
-        <Route path="/connect" component={Connection} />
-        <Route path="/story/:user/:id" component={DisplayStory} />
-        <Route component={NotFound} />
+        <PrivateRoute path="/dashboard" component={Dashboard} />
+        <PrivateRoute path="/profile" component={Profile} />
+        <PrivateRoute path="/feeds" component={Feeds} />
+        <PrivateRoute path="/jobsAndHack" component={JobsAndHacks} />
+        <PrivateRoute path="/connect" component={Connection} />
+        <PrivateRoute path="/story/:user/:id" component={DisplayStory} />
+        <PrivateRoute component={NotFound} />
       </Switch>
     </div>
   );
