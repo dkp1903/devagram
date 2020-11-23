@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -9,6 +9,7 @@ import Button from "../../Button/Button";
 import { FaFacebook } from "react-icons/fa";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
 import { authUser } from "../../../actions";
+import Loader from "../../Loader/Loader";
 
 const Login = ({ auth: { isAuth, loading, error }, loginUser }) => {
   const [email, setEmail] = useState("");
@@ -37,29 +38,35 @@ const Login = ({ auth: { isAuth, loading, error }, loginUser }) => {
           <p style={{ color: "red", textAlign: "center" }}> {error} </p>
         )}
         <form className="form" onSubmit={onLogin}>
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            required
-            aria-labelledby="label-email"
-          />
-          <Input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            name="password"
-            required
-            aria-labelledby="label-password"
-          />
-          <Button
-            type="submit"
-            btnType="Primary"
-            disabled={!(email && password)}
-          >
-            Login
-          </Button>
+          {loading ? (
+            <Loader />
+          ) : (
+            <Fragment>
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                name="email"
+                required
+                aria-labelledby="label-email"
+              />
+              <Input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                name="password"
+                required
+                aria-labelledby="label-password"
+              />
+              <Button
+                type="submit"
+                btnType="Primary"
+                disabled={!(email && password)}
+              >
+                Login
+              </Button>
+            </Fragment>
+          )}
         </form>
         <div className="social-logins">
           <GoogleAuth />
