@@ -1,0 +1,94 @@
+.connect {
+  width: 960px;
+  margin: auto;
+  padding: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.connect-container {
+  position: relative;
+  top: 90px;
+}
+
+.card-container {
+  margin: 15px;
+  position: relative;
+  align-items: center;
+  margin: auto;
+}
+
+.card-row {
+  margin: 0px 10px;
+  padding: 0px 20px;
+  display: block;
+}
+
+.card {
+  display: inline-block;
+  width: 30%;
+  min-width: 400px;
+  height: 400px;
+  /* border: 1px solid transparentize(grey,0.7)  */
+  box-sizing: border-box;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  margin: 1em 1.5%;
+  animation: scl 0.5s ease-in-out;
+  transform-origin: left center;
+  background-color: #fff;
+  border-radius: 18px;
+}
+.card-title {
+  display: block;
+  text-align: center;
+  color: rgb(218, 218, 218);
+  font-size: 2em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.card-image {
+  display: block;
+  margin: 10px auto;
+  padding: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.card-action button {
+  margin-bottom: 5px;
+}
+.card-desc {
+  padding: 0 1em 1em 1em;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.7);
+  display: block;
+  text-align: center;
+  height: 100px;
+}
+.card-action-readMore {
+  height: 3em;
+  width: 8em;
+  background: #1e90ff;
+  border: none;
+  font-weight: light;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  border-radius: 9px;
+  display: block;
+  margin: 10px auto;
+  box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.4);
+}
+.card-action-readMore:hover {
+  background: #0076ce;
+  transition: all 0.1s ease-in;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease-in;
+}
+@media screen and (max-width: 600px) {
+  .connect {
+    grid-template-columns: auto auto auto;
+  }
+}
