@@ -1,23 +1,42 @@
-import { SIGN_IN, SIGN_OUT } from "../actions/types";
+import {
+  AUTH_SUCCESS,
+  SIGN_OUT,
+  AUTH_START,
+  AUTH_FAIL,
+} from "../actions/types";
 
 const INITIAL_STATE = {
   isAuth: null,
-  userId: null,
+  user: null,
+  loading: false,
+  error: null,
 };
 
 export default (state = INITIAL_STATE, action) => {
+  const { payload } = action;
+
   switch (action.type) {
-    case SIGN_IN:
+    case AUTH_START:
+      return {
+        ...state,
+        loading: true,
+      };
+    case AUTH_SUCCESS:
       return {
         ...state,
         isAuth: true,
-        userId: action.payload,
+        user: payload,
+        loading: false,
+        error: null,
       };
     case SIGN_OUT:
+    case AUTH_FAIL:
       return {
         ...state,
         isAuth: false,
-        userId: null,
+        user: null,
+        loading: false,
+        error: payload,
       };
     default:
       return state;

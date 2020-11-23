@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 
 import Title from "../Title/Title";
 import Button from "../../Button/Button";
@@ -6,6 +6,9 @@ import Input from "../Input/Input";
 import { Link } from "react-router-dom";
 import classes from "./Signup.module.css";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
+import { connect } from "react-redux";
+import { authUser } from "../../../actions";
+import Loader from "../../Loader/Loader";
 
 const INITIAL_STATE_FORM_STATE = {
   email: "",
@@ -14,11 +17,9 @@ const INITIAL_STATE_FORM_STATE = {
   password: "",
 };
 
-const Signup = () => {
-  
+const Signup = ({ auth: { error, isAuth, loading }, registerUser }) => {
   const [formValues, setFormValues] = useState({ ...INITIAL_STATE_FORM_STATE });
 
-  // Handles changes to each input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
@@ -27,68 +28,73 @@ const Signup = () => {
     });
   };
 
-  // Handles Submit Function
   const handleSubmit = (e) => {
-    e.preventDefault(); // prevents refresh
+    e.preventDefault();
 
-    console.log(formValues);  
-
-    setFormValues({ ...INITIAL_STATE_FORM_STATE }); // back to empty form
+    registerUser(formValues, true);
+    setFormValues({ ...INITIAL_STATE_FORM_STATE });
   };
 
   return (
     <div className={classes["signup-container"]}>
       <Title title="Devagram" />
-
-      <p className={classes.desc}>Sign up to experience the Developer Hub.</p>
+      <p className={classes.desc}>
+        {error ? error : "Sign up to experience the Developer Hub."}
+      </p>
 
       <form className={classes["signup-form"]} onSubmit={handleSubmit}>
-        <Input
-          aria-labelledby="label-email"
-          type="email"
-          name="email"
-          value={formValues.email}
-          onChange={handleChange}
-          required
-        />
-        <Input
-          aria-labelledby="label-fullname"
-          type="text"
-          name="name"
-          value={formValues.name}
-          onChange={handleChange}
-          required
-        />
-        <Input
-          aria-labelledby="label-username"
-          type="text"
-          name="username"
-          value={formValues.username}
-          onChange={handleChange}
-          required
-        />
-        <Input
-          aria-labelledby="label-password"
-          type="password"
-          name="password"
-          value={formValues.password}
-          onChange={handleChange}
-          required
-        />
-        <Button
-          type="submit"
-          btnType="Primary"
-          disabled={
-            !(
-              formValues.email &&
-              formValues.name &&
-              formValues.username &&
-              formValues.password
-            )
-          }
-        >
-          Sign Up
-        </Button>
+        {loading ? (
+          <Loader />
+        ) : (
+          <Fragment>
+            <Input
+              aria-labelledby="label-email"
+              type="email"
+              name="email"
+              value={formValues.email}
+              onChange={handleChange}
+              required
+            />
+            <Input
+              aria-labelledby="label-fullname"
+              type="text"
+              name="name"
+              value={formValues.name}
+              onChange={handleChange}
+              required
+            />
+            <Input
+              aria-labelledby="label-username"
+              type="text"
+              name="username"
+              value={formValues.username}
+              onChange={handleChange}
+              required
+            />
+            <Input
+              aria-labelledby="label-password"
+              type="password"
+              name="password"
+              value={formValues.password}
+              onChange={handleChange}
+              required
+            />
+            <Button
+              type="submit"
+              btnType="Primary"
+              disabled={
+                !(
+                  formValues.email &&
+                  formValues.name &&
+                  formValues.username &&
+                  formValues.password
+                )
+              }
+            >
+              Sign Up
+            </Button>
+          </Fragment>
+        )}
       </form>
 
       <h5 style={{ color: "#808080" }}>OR</h5>
@@ -100,4 +106,12 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  registerUser: (authData, isSignup) => dispatch(authUser(authData, isSignup)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);

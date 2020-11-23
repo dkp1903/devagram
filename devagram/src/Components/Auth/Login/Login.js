@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import Title from "../Title/Title";
 import classes from "./Login.module.css";
@@ -7,44 +8,27 @@ import Input from "../Input/Input";
 import Button from "../../Button/Button";
 import { FaFacebook } from "react-icons/fa";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
+import { authUser } from "../../../actions";
+import Loader from "../../Loader/Loader";
 
-const Login = () => {
+const Login = ({ auth: { isAuth, loading, error }, loginUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [isAuth, setAuth] = useState(false);
 
   const onLogin = (e) => {
     e.preventDefault();
     const formData = {
-      email: email,
-      password: password,
+      emailOrUsername: email,
+      password,
     };
-
-    console.log(formData);
-
-    /**
-     * To make the api call to post the user data once submitted
-     * below is example of success and failure cases
-     */
-
-    if (email === "app@devagram.com" && password === "devagram2020") {
-      setAuth(true);
-      setEmail("");
-      setPassword("");
-    } else {
-      setError("Invalid credentials");
-      setEmail("");
-      setPassword("");
-      setTimeout(() => {
-        setError("");
-      }, 5000);
-    }
+    loginUser(formData);
+    resetForm();
   };
 
-  if (isAuth) {
-    return <Redirect to="/dashboard" />;
-  }
+  const resetForm = () => {
+    setEmail("");
+    setPassword("");
+  };
 
   return (
     <>
@@ -54,29 +38,35 @@ const Login = () => {
           <p style={{ color: "red", textAlign: "center" }}> {error} </p>
         )}
         <form className="form" onSubmit={onLogin}>
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            required
-            aria-labelledby="label-email"
-          />
-          <Input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            name="password"
-            required
-            aria-labelledby="label-password"
-          />
-          <Button
-            type="submit"
-            btnType="Primary"
-            disabled={!(email && password)}
-          >
-            Login
-          </Button>
+          {loading ? (
+            <Loader />
+          ) : (
+            <Fragment>
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                name="email"
+                required
+                aria-labelledby="label-email"
+              />
+              <Input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                name="password"
+                required
+                aria-labelledby="label-password"
+              />
+              <Button
+                type="submit"
+                btnType="Primary"
+                disabled={!(email && password)}
+              >
+                Login
+              </Button>
+            </Fragment>
+          )}
         </form>
         <div className="social-logins">
           <GoogleAuth />
@@ -93,4 +83,12 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  loginUser: (authData) => dispatch(authUser(authData)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
