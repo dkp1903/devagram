@@ -7,7 +7,7 @@ import {
   FaInbox,
   FaCompass,
   FaHamburger,
-  FaUsers
+  FaUsers,
 } from "react-icons/fa";
 import { AiFillCode } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";

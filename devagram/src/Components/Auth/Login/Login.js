@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import Title from "../Title/Title";
 import classes from "./Login.module.css";
@@ -7,44 +8,31 @@ import Input from "../Input/Input";
 import Button from "../../Button/Button";
 import { FaFacebook } from "react-icons/fa";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
+import { signIn } from "../../../actions";
 
-const Login = () => {
+const Login = ({ auth: { isAuth, loading, error }, loginUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [isAuth, setAuth] = useState(false);
 
   const onLogin = (e) => {
     e.preventDefault();
     const formData = {
-      email: email,
-      password: password,
+      email,
+      password,
     };
-
-    console.log(formData);
 
     /**
      * To make the api call to post the user data once submitted
      * below is example of success and failure cases
      */
-
-    if (email === "app@devagram.com" && password === "devagram2020") {
-      setAuth(true);
-      setEmail("");
-      setPassword("");
-    } else {
-      setError("Invalid credentials");
-      setEmail("");
-      setPassword("");
-      setTimeout(() => {
-        setError("");
-      }, 5000);
-    }
+    loginUser(formData);
+    resetForm();
   };
 
-  if (isAuth) {
-    return <Redirect to="/dashboard" />;
-  }
+  const resetForm = () => {
+    setEmail("");
+    setPassword("");
+  };
 
   return (
     <>
@@ -93,4 +81,12 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  loginUser: (authData) => dispatch(signIn(authData)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
