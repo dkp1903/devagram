@@ -8,7 +8,7 @@ import Input from "../Input/Input";
 import Button from "../../Button/Button";
 import { FaFacebook } from "react-icons/fa";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
-import { signIn } from "../../../actions";
+import { authUser } from "../../../actions";
 
 const Login = ({ auth: { isAuth, loading, error }, loginUser }) => {
   const [email, setEmail] = useState("");
@@ -17,14 +17,9 @@ const Login = ({ auth: { isAuth, loading, error }, loginUser }) => {
   const onLogin = (e) => {
     e.preventDefault();
     const formData = {
-      email,
+      emailOrUsername: email,
       password,
     };
-
-    /**
-     * To make the api call to post the user data once submitted
-     * below is example of success and failure cases
-     */
     loginUser(formData);
     resetForm();
   };
@@ -86,7 +81,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  loginUser: (authData) => dispatch(signIn(authData)),
+  loginUser: (authData) => dispatch(authUser(authData)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

@@ -1,2 +1,2 @@
-export { signIn, signOut } from "./auth";
+export { authUser, signOut } from "./auth";
 export {} from "./post";

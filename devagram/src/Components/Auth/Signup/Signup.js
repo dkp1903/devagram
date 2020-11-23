@@ -6,6 +6,8 @@ import Input from "../Input/Input";
 import { Link } from "react-router-dom";
 import classes from "./Signup.module.css";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
+import { connect } from "react-redux";
+import { authUser } from "../../../actions";
 
 const INITIAL_STATE_FORM_STATE = {
   email: "",
@@ -14,11 +16,9 @@ const INITIAL_STATE_FORM_STATE = {
   password: "",
 };
 
-const Signup = () => {
-  
+const Signup = ({ auth: { error, isAuth, loading }, registerUser }) => {
   const [formValues, setFormValues] = useState({ ...INITIAL_STATE_FORM_STATE });
 
-  // Handles changes to each input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
@@ -27,20 +27,20 @@ const Signup = () => {
     });
   };
 
-  // Handles Submit Function
   const handleSubmit = (e) => {
-    e.preventDefault(); // prevents refresh
+    e.preventDefault();
 
-    console.log(formValues);  
-
-    setFormValues({ ...INITIAL_STATE_FORM_STATE }); // back to empty form
+    registerUser(formValues, true);
+    setFormValues({ ...INITIAL_STATE_FORM_STATE });
   };
 
   return (
     <div className={classes["signup-container"]}>
       <Title title="Devagram" />
 
-      <p className={classes.desc}>Sign up to experience the Developer Hub.</p>
+      <p className={classes.desc}>
+        {error ? error : "Sign up to experience the Developer Hub."}
+      </p>
 
       <form className={classes["signup-form"]} onSubmit={handleSubmit}>
         <Input
@@ -100,4 +100,12 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  registerUser: (authData, isSignup) => dispatch(authUser(authData, isSignup)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);

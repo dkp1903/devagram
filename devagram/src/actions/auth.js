@@ -1,4 +1,5 @@
-import { SIGN_IN, SIGN_OUT, AUTH_ERROR, AUTH_START } from "./types";
+import { SIGN_OUT, AUTH_START, AUTH_SUCCESS, AUTH_FAIL } from "./types";
+import axios from "../axios";
 
 export const authStart = () => {
   return {
@@ -6,17 +7,43 @@ export const authStart = () => {
   };
 };
 
-export const signIn = ({ email, password }) => (dispatch) => {
-  dispatch(authStart());
-  if (email === "app@devagram.com" && password === "devagram2020") {
-    return {
-      type: SIGN_IN,
-      payload: { email, password },
-    };
-  }
+export const authSuccess = (userData) => {
   return {
-    type: AUTH_ERROR,
-    payload: "Invalid credentials",
+    type: AUTH_SUCCESS,
+    payload: userData,
+  };
+};
+
+export const authFailure = (error) => {
+  return {
+    type: AUTH_FAIL,
+    payload: error,
+  };
+};
+
+export const clearError = () => {
+  return {
+    type: AUTH_FAIL,
+    payload: "",
+  };
+};
+
+export const authUser = (authData, isSignUp) => {
+  return async (dispatch) => {
+    dispatch(authStart());
+    try {
+      const url = isSignUp ? "/auth/signup" : "/auth/signin";
+      const response = await axios.post(url, authData, {
+        responseType: "json",
+      });
+      dispatch(authSuccess(response.data));
+    } catch (error) {
+      console.log(error.response.data.message);
+      dispatch(authFailure(error.response.data.message));
+      setTimeout(() => {
+        dispatch(clearError());
+      }, 5000);
+    }
   };
 };
 
