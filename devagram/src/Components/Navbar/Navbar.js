@@ -71,7 +71,7 @@ const Navbar = (props) => {
               className={(classes.Option, classes.Burger)}
               onClick={() => setOpen(!open)}
             >
-              <FaHamburger style={{ color: "black" }} />
+              <FaHamburger style={{ color: "black", cursor: "pointer" }} />
             </div>
           </div>
         </div>
