@@ -1,9 +1,4 @@
-import {
-  AUTH_SUCCESS,
-  SIGN_OUT,
-  AUTH_START,
-  AUTH_FAIL,
-} from "../actions/types";
+import { AUTH_SUCCESS, LOGOUT, AUTH_START, AUTH_FAIL } from "../actions/types";
 
 const INITIAL_STATE = {
   isAuth: null,
@@ -29,7 +24,7 @@ export default (state = INITIAL_STATE, action) => {
         loading: false,
         error: null,
       };
-    case SIGN_OUT:
+    case LOGOUT:
     case AUTH_FAIL:
       return {
         ...state,

@@ -51,7 +51,8 @@
 .Burger {
   display: none;
 }
-.SmallScreen {
+.SmallScreen,
+.ProfileOptions {
   position: absolute;
   top: 3.8rem;
   right: 1rem;
@@ -63,26 +64,39 @@
   transform-origin: top;
   transition: all 200ms;
 }
-.SmallScreen a {
+.ProfileOptions {
+  right: 10vw;
+  top: 3rem;
+}
+.SmallScreen a,
+.ProfileOptions a {
   display: block;
   color: black;
   padding: 0.25rem;
+}
+.ProfileOption:nth-of-type(2) {
+  display: none;
 }
 .Open {
   opacity: 1 !important;
   transform: scaleY(1) !important;
   transition: all 200ms;
 }
-.SmallScreen .SmallOption + .SmallOption {
+.SmallScreen .SmallOption + .SmallOption,
+.ProfileOptions .ProfileOption + .ProfileOption {
   border-top: 1px solid gray;
 }
-.SmallScreen a span {
+.SmallScreen a span,
+.ProfileOptions a span {
   margin-left: 0.5rem;
 }
 
 @media (max-width: 900px) {
   .Search {
     display: none;
+  }
+  .ProfileOption:nth-of-type(2) {
+    display: block;
   }
 }
 @media (max-width: 850px) {
@@ -92,5 +106,43 @@
   }
   .Option {
     display: none;
+  }
+  .ProfileOptions {
+    position: absolute;
+    top: 94vh;
+    left: 0;
+    width: 100%;
+    background: #eee;
+    padding: 1rem;
+    transform: scaleY(1);
+    opacity: 1;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-top: 1px solid gray;
+  }
+  .ProfileOption a {
+    color: gray;
+  }
+  .ProfileOptions .ProfileOption + .ProfileOption {
+    border-top: none !important;
+  }
+  .ProfileOption span {
+    display: none;
+  }
+  .ProfileOption.selected a {
+    color: black !important;
+  }
+}
+@media (max-height: 750px) {
+  .ProfileOptions {
+    top: 93vh;
+  }
+}
+@media (max-height: 650px) {
+  .ProfileOptions {
+    top: 92.5vh;
   }
 }
